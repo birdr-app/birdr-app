@@ -1,0 +1,76 @@
+{
+  "name": "birdr",
+  "version": "0.3.0",
+  "private": true,
+  "dependencies": {
+    "@capacitor/android": "^7.2.0",
+    "@capacitor/cli": "^6.2.1",
+    "@capacitor/core": "^7.2.0",
+    "@capacitor/ios": "^7.2.0",
+    "@chakra-ui/react": "^2.8.2",
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.0",
+    "@react-oauth/google": "^0.12.1",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^14.4.3",
+    "@types/country-flag-icons": "^1.2.2",
+    "@types/date-fns": "^2.6.3",
+    "@types/jest": "^28.1.8",
+    "@types/node": "^12.20.55",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@types/react-icons": "^3.0.0",
+    "@types/react-intl": "^3.0.0",
+    "@types/react-router-dom": "^5.3.3",
+    "axios": "^1.7.9",
+    "chakra-react-select": "^4.6.0",
+    "copy-to-clipboard": "^3.3.3",
+    "country-flag-icons": "^1.5.13",
+    "date-fns": "^3.6.0",
+    "formatjs": "^0.1.1",
+    "framer-motion": "^11.0.8",
+    "http-proxy-middleware": "^2.0.7",
+    "keyframes": "^2.3.0",
+    "react": "^18.2.0",
+    "react-confetti": "^6.1.0",
+    "react-dom": "^18.2.0",
+    "react-dom-confetti": "^0.2.0",
+    "react-icons": "^3.11.0",
+    "react-intl": "^6.7.0",
+    "react-player": "^2.16.0",
+    "react-scripts": "5.0.1",
+    "react-world-flags": "^1.6.0",
+    "typescript": "^4.9.5",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "deploy": "scp -r build birdr.pro:/var/www/jizz/jizz/app",
+    "release": "npm run build && npm run deploy",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "extract-messages": "formatjs extract 'src/**/*.ts*' --ignore='**/*.d.ts' --out-file translations/en.json --id-interpolation-pattern '[sha512:contenthash:base64:6]' --format simple"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-typescript": "^7.25.7",
+    "extract-react-intl-messages": "^4.1.1",
+    "react-router-dom": "^6.14.2"
+  }
+}
